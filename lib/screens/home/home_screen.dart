@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_app/screens/home/widgets/bottom_nav.dart';
+import 'package:netflix_app/screens/home/widgets/custom_movie.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,17 +19,19 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Image.asset('assets/logo.png', width: 30),
+        leading: Image.asset('assets/logo.png',),
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("TV Shows"),
-            Text("Movies"),
-            Text("My List"),
+            TextButton(onPressed: (){}, child:Text("TV Shows",style: TextStyle(color: Colors.white,fontSize: 20),),),
+            TextButton(onPressed: (){}, child:Text("Movies",style: TextStyle(color: Colors.white,fontSize: 20),),),
+            TextButton(onPressed: (){}, child:Text("My list",style: TextStyle(color: Colors.white,fontSize: 20),),),
+            
           ],
         ),
       ),
@@ -38,7 +41,7 @@ class HomeScreen extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Image.asset(
-                'assets/netflix.png',
+                'assets/movie.jfif',
                 fit: BoxFit.cover,
                 width: double.infinity,
                 height: 300,
@@ -85,36 +88,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Text(
-              "Previews",
-              style: TextStyle(color: Colors.white, fontSize: 18),
-            ),
-          ),
-          SizedBox(height: 10),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Row(
-              children: List.generate(5, (index) {
-                return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 5),
-                  width: 80,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage('assets/netflix.png'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                );
-              }),
-            ),
-          ),
-          SizedBox(height: 20),
-
+          CustomMovie(text: "test"),
           // Continue Watching section
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
