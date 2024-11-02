@@ -24,15 +24,15 @@ class BottomNav extends StatelessWidget {
               items: const [
                 BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.photo_library_outlined),
-                    label: 'New & Hot'),
+                    icon: Icon(Icons.search),
+                    label: 'Search'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.emoji_emotions_outlined),
-                    label: 'Fast laugh'),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.search), label: 'Search'),
+                    icon: Icon(Icons.video_library_outlined),
+                    label: 'Coming Soon'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.download), label: 'Downloads'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.stacked_bar_chart), label: 'More'),
               ]);
         });
   }
