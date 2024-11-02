@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:netflix_app/screens/download_screen.dart';
 import 'package:netflix_app/screens/home/home_screen.dart';
+import 'package:netflix_app/screens/more_screen.dart';
 import 'package:netflix_app/screens/search_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) =>SearchScreen() ));
+          context, MaterialPageRoute(builder: (context) =>DownloadScreen() ));
     });
   }
 
