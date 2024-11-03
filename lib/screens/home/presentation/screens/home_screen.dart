@@ -25,8 +25,7 @@ class HomeScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => MovieCubit(MoviesRepo(Api()))..fetchTrendingMovies(),
       child: Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
+         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: Image.asset('assets/logo.png', width: 10),
@@ -57,6 +56,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
+        backgroundColor: Colors.black,
         body: ListView(
           children: [
             Stack(
@@ -138,7 +138,6 @@ class HomeScreen extends StatelessWidget {
             CustomMovie(title: "Now Playing on Netflix", movieType: 'now_playing'),
           ],
         ),
-        bottomNavigationBar: BottomNav(),
       ),
     );
   }

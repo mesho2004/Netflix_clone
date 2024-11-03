@@ -59,7 +59,7 @@ class _DownloadsState extends State<Downloads> {
         child: ListView(
           children: [
             const DownloadTitle(),
-            smallHeight,
+            // smallHeight,
             const Text(
               'Introducing Downloads for you',
               textAlign: TextAlign.center,
@@ -68,7 +68,7 @@ class _DownloadsState extends State<Downloads> {
                   fontSize: 24,
                   fontWeight: FontWeight.bold),
             ),
-            smallHeight,
+            // smallHeight,
             const Text(
               textAlign: TextAlign.center,
               "We will downloads a personalised selections of\nmovies and shows for you, so there's\nalways something to watch on your device.",
