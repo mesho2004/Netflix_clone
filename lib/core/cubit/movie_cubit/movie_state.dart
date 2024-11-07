@@ -1,5 +1,4 @@
-
-import 'package:netflix_app/core/models/movie_model.dart';
+import 'package:netflix_app/core/models/movie%20model/movie_model.dart';
 
 abstract class MovieState {}
 

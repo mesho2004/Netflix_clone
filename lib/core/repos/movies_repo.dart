@@ -1,8 +1,6 @@
-
-
 import 'package:netflix_app/core/api/api_service.dart';
-import 'package:netflix_app/core/models/movie_details_model.dart';
-import 'package:netflix_app/core/models/movie_model.dart';
+import 'package:netflix_app/core/models/movie%20model/movie_details_model.dart';
+import 'package:netflix_app/core/models/movie%20model/movie_model.dart';
 
 class MoviesRepo {
   final Api api;

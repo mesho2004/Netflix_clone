@@ -13,7 +13,7 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
         child: CustomScrollView(
@@ -21,14 +21,12 @@ class SearchScreen extends StatelessWidget {
             SliverToBoxAdapter(
               child: TextField(
                 decoration: InputDecoration(
-                  
                   hintText: 'Search for a show, movie, genre, e.t.c.',
                   prefixIcon: Icon(Icons.search, color: Colors.white),
                   suffixIcon: Icon(Icons.mic, color: Colors.white),
                   filled: true,
                   fillColor: Colors.grey,
                   border: OutlineInputBorder(
-                    
                     borderSide: BorderSide.none,
                   ),
                   hintStyle: TextStyle(color: Colors.white54),
@@ -36,11 +34,12 @@ class SearchScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
             ),
-            
+
             // Top Searches title
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                 child: Text(
                   'Top Searches',
                   style: TextStyle(
@@ -83,8 +82,8 @@ class MovieCard extends StatelessWidget {
       color: Colors.grey[800],
       elevation: 4,
       shape: RoundedRectangleBorder(
-        // borderRadius: BorderRadius.circular(8.0),
-      ),
+          // borderRadius: BorderRadius.circular(8.0),
+          ),
       margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -120,7 +119,6 @@ class MovieCard extends StatelessWidget {
               color: Colors.white,
               size: 30,
             ),
-            
           ],
         ),
       ),

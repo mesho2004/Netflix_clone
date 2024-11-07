@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:netflix_app/screens/download_screen.dart';
 import 'package:netflix_app/screens/home/presentation/screens/home_screen.dart';
@@ -10,11 +9,10 @@ class MainScreen extends StatelessWidget {
   MainScreen({super.key});
 
   final pages = [
-     HomeScreen(),
-     SearchScreen(),
-     MoreScreen(),
-     DownloadScreen(),
-     
+    HomeScreen(),
+    SearchScreen(),
+    MoreScreen(),
+    DownloadScreen(),
   ];
 
   @override

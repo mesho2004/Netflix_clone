@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix_app/core/api/api_service.dart';
-import 'package:netflix_app/core/cubit/movie_cubit.dart';
+import 'package:netflix_app/core/constant/apikey.dart';
+import 'package:netflix_app/core/cubit/movie_cubit/movie_cubit.dart';
 import 'package:netflix_app/core/repos/movies_repo.dart';
 import 'package:netflix_app/screens/home/presentation/widgets/bottom_nav.dart';
 import 'package:netflix_app/screens/home/presentation/widgets/custom_movie.dart';
@@ -25,7 +26,7 @@ class HomeScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => MovieCubit(MoviesRepo(Api()))..fetchTrendingMovies(),
       child: Scaffold(
-         appBar: AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: Image.asset('assets/logo.png', width: 10),
@@ -63,7 +64,7 @@ class HomeScreen extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/netflix.png',
+                  "assets/netflix.png",
                   fit: BoxFit.cover,
                   width: double.infinity,
                   height: 450,
@@ -135,7 +136,8 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 10),
             CustomMovie(title: "Upcoming on Netflix", movieType: 'upcoming'),
             SizedBox(height: 10),
-            CustomMovie(title: "Now Playing on Netflix", movieType: 'now_playing'),
+            CustomMovie(
+                title: "Now Playing on Netflix", movieType: 'now_playing'),
           ],
         ),
       ),

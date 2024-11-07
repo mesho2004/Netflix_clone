@@ -26,6 +26,7 @@ class MovieCubit extends Cubit<MovieState> {
       emit(MovieError('Failed to load trending movies: $error'));
     }
   }
+
   void fetchUpComingMovies() async {
     try {
       emit(MovieLoading());
@@ -35,6 +36,7 @@ class MovieCubit extends Cubit<MovieState> {
       emit(MovieError('Failed to load upcoming movies: $error'));
     }
   }
+
   void fetchPopularMovies() async {
     try {
       emit(MovieLoading());
@@ -44,6 +46,7 @@ class MovieCubit extends Cubit<MovieState> {
       emit(MovieError('Failed to load popular movies: $error'));
     }
   }
+
   void fetchTopRatedMovies() async {
     try {
       emit(MovieLoading());

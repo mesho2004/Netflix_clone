@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:netflix_app/core/constant/apikey.dart';
-import 'package:netflix_app/core/models/movie_model.dart';
+import 'package:netflix_app/core/models/movie%20model/movie_model.dart';
 import 'package:netflix_app/screens/details/details_screen.dart';
 
 class Recommended extends StatelessWidget {

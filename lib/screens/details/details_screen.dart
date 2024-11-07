@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:netflix_app/core/api/api_service.dart';
-import 'package:netflix_app/core/models/movie_details_model.dart';
-import 'package:netflix_app/core/models/movie_model.dart';
+import 'package:netflix_app/core/models/movie%20model/movie_details_model.dart';
+import 'package:netflix_app/core/models/movie%20model/movie_model.dart';
 import 'package:netflix_app/screens/details/widgets/details_image.dart';
 import 'package:netflix_app/screens/details/widgets/details_info.dart';
 import 'package:netflix_app/screens/details/widgets/details_recommended.dart';
@@ -40,15 +39,13 @@ class _MovieDetailState extends State<MovieDetail> {
                     color: Colors.white,
                   ),
                 );
-              } else if (!snapshot.hasData ||
-                  snapshot.data == null ) {
+              } else if (!snapshot.hasData || snapshot.data == null) {
                 // log(snapshot.data.toString());
 
                 return const Text('No Details');
               }
-              String genre = snapshot.data!.genres
-                  .map((genre) => genre.name)
-                  .join(',');
+              String genre =
+                  snapshot.data!.genres.map((genre) => genre.name).join(',');
               return Column(
                 children: [
                   DetailImage(

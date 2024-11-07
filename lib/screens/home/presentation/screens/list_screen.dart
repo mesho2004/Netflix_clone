@@ -8,14 +8,13 @@ class ListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("My List"),
-      ),
-      backgroundColor: Colors.black,
+        appBar: AppBar(
+          title: Text("My List"),
+        ),
+        backgroundColor: Colors.black,
         body: GridView.builder(
             gridDelegate:
                 SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
-                                
             itemBuilder: (context, index) {
               return ListWidget();
             }));

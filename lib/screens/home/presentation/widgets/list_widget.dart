@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ListWidget extends StatelessWidget {
-  const ListWidget({super.key,  this.image});
+  const ListWidget({super.key, this.image});
   final String? image;
 
   @override

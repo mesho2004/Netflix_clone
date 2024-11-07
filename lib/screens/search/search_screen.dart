@@ -11,7 +11,7 @@ class SearchScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-               CupertinoSearchTextField(
+              CupertinoSearchTextField(
                 padding: const EdgeInsets.all(16),
                 prefixIcon: const Icon(
                   Icons.search,
@@ -24,7 +24,6 @@ class SearchScreen extends StatelessWidget {
           ),
         ),
       ),
-
     );
   }
 }

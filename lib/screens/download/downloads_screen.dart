@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:netflix_app/core/api/api_service.dart';
-import 'package:netflix_app/core/models/movie_model.dart';
+import 'package:netflix_app/core/models/movie%20model/movie_model.dart';
 import 'package:netflix_app/screens/download/widgets/download_image.dart';
 import 'package:netflix_app/screens/download/widgets/download_tile.dart';
 

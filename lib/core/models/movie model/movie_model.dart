@@ -29,6 +29,5 @@ class Movie {
         id: json["id"] ?? '',
         voteAverage: json["vote_average"]);
   }
-    String get fullImageUrl => 'https://image.tmdb.org/t/p/w500$posterPath';
-
+  String get fullImageUrl => 'https://image.tmdb.org/t/p/w500$posterPath';
 }

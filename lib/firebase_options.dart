@@ -85,5 +85,4 @@ class DefaultFirebaseOptions {
     storageBucket: 'netflix-4d730.firebasestorage.app',
     measurementId: 'G-TZXDHKLZ4G',
   );
-
 }
