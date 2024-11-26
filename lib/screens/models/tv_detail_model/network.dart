@@ -8,6 +8,11 @@ class Network {
 
   Network({this.id, this.logoPath, this.name, this.originCountry});
 
+  @override
+  String toString() {
+    return 'Network(id: $id, logoPath: $logoPath, name: $name, originCountry: $originCountry)';
+  }
+
   factory Network.fromMap(Map<String, dynamic> data) => Network(
         id: data['id'] as int?,
         logoPath: data['logo_path'] as String?,

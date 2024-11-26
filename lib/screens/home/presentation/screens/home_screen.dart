@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflix_app/core/api/api_service.dart';
-import 'package:netflix_app/core/constant/apikey.dart';
-import 'package:netflix_app/core/cubit/movie_cubit/movie_cubit.dart';
+import 'package:netflix_app/core/repos/tv_repo.dart';
+import 'package:netflix_app/screens/home/data/movie_cubit/movie_cubit.dart';
 import 'package:netflix_app/core/repos/movies_repo.dart';
-import 'package:netflix_app/screens/home/presentation/widgets/bottom_nav.dart';
+import 'package:netflix_app/screens/home/data/tv_cubit/tv_cubit.dart';
 import 'package:netflix_app/screens/home/presentation/widgets/custom_movie.dart';
 
 void main() {
@@ -23,8 +23,15 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => MovieCubit(MoviesRepo(Api()))..fetchTrendingMovies(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+      create: (context) => MovieCubit(MoviesRepo(Api())),
+      ),
+      BlocProvider(
+      create: (context) => TvCubit(TvRepo(Api())),
+      ),
+      ],
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
@@ -119,25 +126,27 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Text(
-                "Continue Watching for Emenalo",
-                style: TextStyle(color: Colors.white, fontSize: 18),
-              ),
-            ),
-            SizedBox(height: 10),
-            CustomMovie(title: "Popular on Netflix", movieType: 'popular'),
-            SizedBox(height: 10),
-            CustomMovie(title: "Top 10 in Egypt Today", movieType: 'top'),
-            SizedBox(height: 10),
-            CustomMovie(title: "Trending on Netflix", movieType: 'trending'),
-            SizedBox(height: 10),
-            CustomMovie(title: "Upcoming on Netflix", movieType: 'upcoming'),
             SizedBox(height: 10),
             CustomMovie(
-                title: "Now Playing on Netflix", movieType: 'now_playing'),
+                title: "Popular Movies on Netflix", movieType: 'popular'),
+            SizedBox(height: 10),
+            CustomMovie(
+                title: "Top 10 Movies in Egypt Today", movieType: 'top'),
+            SizedBox(height: 10),
+            CustomMovie(
+                title: "Trending Movies on Netflix", movieType: 'trending'),
+            SizedBox(height: 10),
+            CustomMovie(
+                title: "Upcoming Movies on Netflix", movieType: 'upcoming'),
+            SizedBox(height: 10),
+            CustomMovie(
+                title: "Now Playing Movies on Netflix",
+                movieType: 'now_playing'),
+            CustomMovie(title: "On Air Tv Shows", movieType: 'tv_on_air'),
+            CustomMovie(
+                title: "Airing Now Tv Shows", movieType: 'tv_airing_now'),
+            CustomMovie(title: "Top Rated Tv Shows", movieType: 'tv_top'),
+            CustomMovie(title: "Popular Tv Shows", movieType: 'tv_popular'),
           ],
         ),
       ),

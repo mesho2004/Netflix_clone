@@ -17,6 +17,11 @@ class CreatedBy {
     this.profilePath,
   });
 
+  @override
+  String toString() {
+    return 'CreatedBy(id: $id, creditId: $creditId, name: $name, originalName: $originalName, gender: $gender, profilePath: $profilePath)';
+  }
+
   factory CreatedBy.fromMap(Map<String, dynamic> data) => CreatedBy(
         id: data['id'] as int?,
         creditId: data['credit_id'] as String?,

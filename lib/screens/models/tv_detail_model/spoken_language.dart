@@ -7,6 +7,11 @@ class SpokenLanguage {
 
   SpokenLanguage({this.englishName, this.iso6391, this.name});
 
+  @override
+  String toString() {
+    return 'SpokenLanguage(englishName: $englishName, iso6391: $iso6391, name: $name)';
+  }
+
   factory SpokenLanguage.fromMap(Map<String, dynamic> data) {
     return SpokenLanguage(
       englishName: data['english_name'] as String?,

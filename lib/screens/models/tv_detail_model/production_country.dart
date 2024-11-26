@@ -6,6 +6,9 @@ class ProductionCountry {
 
   ProductionCountry({this.iso31661, this.name});
 
+  @override
+  String toString() => 'ProductionCountry(iso31661: $iso31661, name: $name)';
+
   factory ProductionCountry.fromMap(Map<String, dynamic> data) {
     return ProductionCountry(
       iso31661: data['iso_3166_1'] as String?,

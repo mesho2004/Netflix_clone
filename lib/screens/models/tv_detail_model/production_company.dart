@@ -2,7 +2,7 @@ import 'dart:convert';
 
 class ProductionCompany {
   int? id;
-  dynamic logoPath;
+  String? logoPath;
   String? name;
   String? originCountry;
 
@@ -13,10 +13,15 @@ class ProductionCompany {
     this.originCountry,
   });
 
+  @override
+  String toString() {
+    return 'ProductionCompany(id: $id, logoPath: $logoPath, name: $name, originCountry: $originCountry)';
+  }
+
   factory ProductionCompany.fromMap(Map<String, dynamic> data) {
     return ProductionCompany(
       id: data['id'] as int?,
-      logoPath: data['logo_path'] as dynamic,
+      logoPath: data['logo_path'] as String?,
       name: data['name'] as String?,
       originCountry: data['origin_country'] as String?,
     );
@@ -43,7 +48,7 @@ class ProductionCompany {
 
   ProductionCompany copyWith({
     int? id,
-    dynamic logoPath,
+    String? logoPath,
     String? name,
     String? originCountry,
   }) {

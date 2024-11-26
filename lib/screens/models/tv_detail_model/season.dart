@@ -1,14 +1,14 @@
 import 'dart:convert';
 
 class Season {
-  String? airDate;
+  dynamic airDate;
   int? episodeCount;
   int? id;
   String? name;
   String? overview;
   dynamic posterPath;
   int? seasonNumber;
-  double? voteAverage;
+  int? voteAverage;
 
   Season({
     this.airDate,
@@ -21,15 +21,20 @@ class Season {
     this.voteAverage,
   });
 
+  @override
+  String toString() {
+    return 'Season(airDate: $airDate, episodeCount: $episodeCount, id: $id, name: $name, overview: $overview, posterPath: $posterPath, seasonNumber: $seasonNumber, voteAverage: $voteAverage)';
+  }
+
   factory Season.fromMap(Map<String, dynamic> data) => Season(
-        airDate: data['air_date'] as String?,
+        airDate: data['air_date'] as dynamic,
         episodeCount: data['episode_count'] as int?,
         id: data['id'] as int?,
         name: data['name'] as String?,
         overview: data['overview'] as String?,
         posterPath: data['poster_path'] as dynamic,
         seasonNumber: data['season_number'] as int?,
-        voteAverage: (data['vote_average'] as num?)?.toDouble(),
+        voteAverage: data['vote_average'] as int?,
       );
 
   Map<String, dynamic> toMap() => {
@@ -56,14 +61,14 @@ class Season {
   String toJson() => json.encode(toMap());
 
   Season copyWith({
-    String? airDate,
+    dynamic airDate,
     int? episodeCount,
     int? id,
     String? name,
     String? overview,
     dynamic posterPath,
     int? seasonNumber,
-    double? voteAverage,
+    int? voteAverage,
   }) {
     return Season(
       airDate: airDate ?? this.airDate,

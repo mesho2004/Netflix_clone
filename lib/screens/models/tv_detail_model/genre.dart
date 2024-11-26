@@ -6,6 +6,9 @@ class Genre {
 
   Genre({this.id, this.name});
 
+  @override
+  String toString() => 'Genre(id: $id, name: $name)';
+
   factory Genre.fromMap(Map<String, dynamic> data) => Genre(
         id: data['id'] as int?,
         name: data['name'] as String?,

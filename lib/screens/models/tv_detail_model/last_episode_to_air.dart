@@ -4,7 +4,7 @@ class LastEpisodeToAir {
   int? id;
   String? name;
   String? overview;
-  int? voteAverage;
+  double? voteAverage;
   int? voteCount;
   String? airDate;
   int? episodeNumber;
@@ -13,7 +13,7 @@ class LastEpisodeToAir {
   int? runtime;
   int? seasonNumber;
   int? showId;
-  dynamic stillPath;
+  String? stillPath;
 
   LastEpisodeToAir({
     this.id,
@@ -31,12 +31,17 @@ class LastEpisodeToAir {
     this.stillPath,
   });
 
+  @override
+  String toString() {
+    return 'LastEpisodeToAir(id: $id, name: $name, overview: $overview, voteAverage: $voteAverage, voteCount: $voteCount, airDate: $airDate, episodeNumber: $episodeNumber, episodeType: $episodeType, productionCode: $productionCode, runtime: $runtime, seasonNumber: $seasonNumber, showId: $showId, stillPath: $stillPath)';
+  }
+
   factory LastEpisodeToAir.fromMap(Map<String, dynamic> data) {
     return LastEpisodeToAir(
       id: data['id'] as int?,
       name: data['name'] as String?,
       overview: data['overview'] as String?,
-      voteAverage: data['vote_average'] as int?,
+      voteAverage: (data['vote_average'] as num?)?.toDouble(),
       voteCount: data['vote_count'] as int?,
       airDate: data['air_date'] as String?,
       episodeNumber: data['episode_number'] as int?,
@@ -45,7 +50,7 @@ class LastEpisodeToAir {
       runtime: data['runtime'] as int?,
       seasonNumber: data['season_number'] as int?,
       showId: data['show_id'] as int?,
-      stillPath: data['still_path'] as dynamic,
+      stillPath: data['still_path'] as String?,
     );
   }
 
@@ -81,7 +86,7 @@ class LastEpisodeToAir {
     int? id,
     String? name,
     String? overview,
-    int? voteAverage,
+    double? voteAverage,
     int? voteCount,
     String? airDate,
     int? episodeNumber,
@@ -90,7 +95,7 @@ class LastEpisodeToAir {
     int? runtime,
     int? seasonNumber,
     int? showId,
-    dynamic stillPath,
+    String? stillPath,
   }) {
     return LastEpisodeToAir(
       id: id ?? this.id,

@@ -22,11 +22,11 @@ class DetailInfo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(
-            height: 15,
+            height: 25,
           ),
           Text(
             title,
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.white),
           ),
           const SizedBox(
             height: 15,
@@ -38,14 +38,14 @@ class DetailInfo extends StatelessWidget {
               children: [
                 Text(
                   date,
-                  style: const TextStyle(color: Colors.grey, fontSize: 18),
+                  style: const TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 SizedBox(
                   width: 256,
                   child: Text(
                     genre,
                     maxLines: 2,
-                    style: const TextStyle(color: Colors.grey, fontSize: 18),
+                    style: const TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 )
               ],

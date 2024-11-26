@@ -6,6 +6,7 @@ import 'package:netflix_app/core/constant/apikey.dart';
 import 'package:netflix_app/core/models/movie%20model/movie_details_model.dart';
 import 'package:netflix_app/core/models/movie%20model/movie_model.dart';
 import 'package:netflix_app/core/models/tv_details_model/tv_details_model.dart';
+import 'package:netflix_app/screens/models/tv_detail_model/tv_detail_model.dart';
 
 import '../models/tv_details_model/tv_model.dart';
 
@@ -78,7 +79,7 @@ class Api {
   }
 
   Future<List<Movie>> getSearch(String searchText) async {
-    final search = '${baseUrl}search/movie?query=$searchText$key';
+    final search = '${baseUrl}search/movie$key&query=${searchText}';
     try {
       final response = await _dio.get(search);
       final decodeData = response.data['results'] as List;
@@ -133,6 +134,7 @@ class Api {
       throw Exception('Failed to load on the air TV shows');
     }
   }
+
   Future<List<Tv>> getPopularTv() async {
     try {
       final response = await _dio.get(popular_tv);
@@ -143,6 +145,7 @@ class Api {
       throw Exception('Failed to load popular TV shows');
     }
   }
+
   Future<List<Tv>> getTopRatedTv() async {
     try {
       final response = await _dio.get(top_rated_tv);
@@ -153,6 +156,7 @@ class Api {
       throw Exception('Failed to load top rated TV shows');
     }
   }
+
   Future<List<Tv>> getTvRecommendation(int id) async {
     final recommendation = '${baseUrl}tv/$id/recommendations$key';
     try {
@@ -164,14 +168,15 @@ class Api {
       throw Exception('Failed to load recommendations');
     }
   }
+
   Future<TvDetailsModel> getTvDetails(int id) async {
-    final details = '${baseUrl}tv/$id$key';
+    final Tvdetails = '${baseUrl}tv/$id$key';
     try {
-      final response = await _dio.get(details);
+      final response = await _dio.get(Tvdetails);
       return TvDetailsModel.fromJson(response.data);
     } catch (e) {
-      log('Error fetching movie details: $e');
-      throw Exception('Failed to load movie details');
+      log('Error fetching tv details: $e');
+      throw Exception('Failed to load tv details');
     }
   }
 }
