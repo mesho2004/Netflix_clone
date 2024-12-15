@@ -5,6 +5,7 @@ import 'package:netflix_app/core/constant/apikey.dart';
 import 'package:netflix_app/screens/details/presentation/movie/details_screen.dart';
 import 'package:netflix_app/screens/search/widgets/search_cubit.dart';
 import 'package:netflix_app/screens/search/widgets/top_search.dart';
+import 'package:netflix_app/screens/testtttt/movie_details_screen.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -48,7 +49,7 @@ class _SearchState extends State<SearchScreen> {
                 backgroundColor: Colors.grey.withOpacity(0.3),
                 onChanged: (value) {
                   if (value.isNotEmpty) {
-                    searchCubit.searching(value); 
+                    searchCubit.searching(value);
                   }
                 },
               ),
@@ -81,7 +82,8 @@ class _SearchState extends State<SearchScreen> {
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount: state.movies.length,
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                         mainAxisSpacing: 15,
                         crossAxisSpacing: 5,
@@ -93,7 +95,7 @@ class _SearchState extends State<SearchScreen> {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MovieDetail(id: movie.id),
+                              builder: (context) => MovieDetailsScreen(movieId: movie.id),
                             ),
                           ),
                           child: SizedBox(

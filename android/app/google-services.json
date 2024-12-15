@@ -1,32 +1,13 @@
 {
   "project_info": {
-    "project_number": "431751396135",
-    "project_id": "netflix-4d730",
-    "storage_bucket": "netflix-4d730.firebasestorage.app"
+    "project_number": "45642392985",
+    "project_id": "netflix2-4f122",
+    "storage_bucket": "netflix2-4f122.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:431751396135:android:80a4a14e28f915317bc702",
-        "android_client_info": {
-          "package_name": "com.app"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCsAClnOGvGSGVKADOKx7Rcq7ItSPjbTrs"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:431751396135:android:a2f025a5eded45997bc702",
+        "mobilesdk_app_id": "1:45642392985:android:05c2d283a4c3e3591c9f08",
         "android_client_info": {
           "package_name": "com.example.netflix_app"
         }
@@ -34,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCsAClnOGvGSGVKADOKx7Rcq7ItSPjbTrs"
+          "current_key": "AIzaSyBkE0veQms_e2tSjrdwI3NXGeyMkTJCEMA"
         }
       ],
       "services": {

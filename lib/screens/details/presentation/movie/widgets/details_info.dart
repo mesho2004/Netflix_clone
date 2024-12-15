@@ -26,7 +26,8 @@ class DetailInfo extends StatelessWidget {
           ),
           Text(
             title,
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.white),
+            style: const TextStyle(
+                fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           const SizedBox(
             height: 15,

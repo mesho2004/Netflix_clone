@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix_app/core/constant/apikey.dart';
 import 'package:netflix_app/core/models/movie%20model/movie_model.dart';
 import 'package:netflix_app/screens/details/presentation/movie/details_screen.dart';
+import 'package:netflix_app/screens/testtttt/movie_details_screen.dart';
 
 class TopSearch extends StatelessWidget {
   final List<Movie>? movies;
@@ -16,7 +17,7 @@ class TopSearch extends StatelessWidget {
           height: 30,
         ),
         const Text('Top Searches',
-            style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white)),
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
         const SizedBox(
           height: 20,
         ),
@@ -32,7 +33,7 @@ class TopSearch extends StatelessWidget {
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => MovieDetail(id: movie.id))),
+                        builder: (context) => MovieDetailsScreen(movieId: movie.id))),
                 child: Container(
                   height: 150,
                   padding: const EdgeInsets.all(5),

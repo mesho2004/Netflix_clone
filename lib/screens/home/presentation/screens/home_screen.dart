@@ -7,18 +7,9 @@ import 'package:netflix_app/core/repos/movies_repo.dart';
 import 'package:netflix_app/screens/home/data/tv_cubit/tv_cubit.dart';
 import 'package:netflix_app/screens/home/presentation/widgets/custom_movie.dart';
 
-void main() {
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen(),
-    );
-  }
-}
+
+
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -26,11 +17,11 @@ class HomeScreen extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-      create: (context) => MovieCubit(MoviesRepo(Api())),
-      ),
-      BlocProvider(
-      create: (context) => TvCubit(TvRepo(Api())),
-      ),
+          create: (context) => MovieCubit(MoviesRepo(Api())),
+        ),
+        BlocProvider(
+          create: (context) => TvCubit(TvRepo(Api())),
+        ),
       ],
       child: Scaffold(
         appBar: AppBar(
@@ -70,8 +61,8 @@ class HomeScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Image.asset(
-                  "assets/netflix.png",
+                Image.network(
+                  "https://i.pinimg.com/736x/11/99/e7/1199e7af4428e98189efd90b454923f5.jpg",
                   fit: BoxFit.cover,
                   width: double.infinity,
                   height: 450,

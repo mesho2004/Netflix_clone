@@ -26,7 +26,7 @@ class TvDetailsModel {
   String posterPath;
   List<Network> productionCompanies;
   List<ProductionCountry> productionCountries;
-  List<Season> seasons;
+  // List<Season> seasons;
   List<SpokenLanguage> spokenLanguages;
   String status;
   String tagline;
@@ -60,7 +60,7 @@ class TvDetailsModel {
     required this.posterPath,
     required this.productionCompanies,
     required this.productionCountries,
-    required this.seasons,
+    // required this.seasons,
     required this.spokenLanguages,
     required this.status,
     required this.tagline,
@@ -95,7 +95,7 @@ class TvDetailsModel {
     String? posterPath,
     List<Network>? productionCompanies,
     List<ProductionCountry>? productionCountries,
-    List<Season>? seasons,
+    // List<Season>? seasons,
     List<SpokenLanguage>? spokenLanguages,
     String? status,
     String? tagline,
@@ -129,7 +129,7 @@ class TvDetailsModel {
         posterPath: posterPath ?? this.posterPath,
         productionCompanies: productionCompanies ?? this.productionCompanies,
         productionCountries: productionCountries ?? this.productionCountries,
-        seasons: seasons ?? this.seasons,
+        // seasons: seasons ?? this.seasons,
         spokenLanguages: spokenLanguages ?? this.spokenLanguages,
         status: status ?? this.status,
         tagline: tagline ?? this.tagline,
@@ -175,8 +175,8 @@ class TvDetailsModel {
         productionCountries: List<ProductionCountry>.from(
             json["production_countries"]
                 .map((x) => ProductionCountry.fromJson(x))),
-        seasons:
-            List<Season>.from(json["seasons"].map((x) => Season.fromJson(x))),
+        // seasons:
+        //     List<Season>.from(json["seasons"].map((x) => Season.fromJson(x))),
         spokenLanguages: List<SpokenLanguage>.from(
             json["spoken_languages"].map((x) => SpokenLanguage.fromJson(x))),
         status: json["status"],
@@ -216,7 +216,7 @@ class TvDetailsModel {
             List<dynamic>.from(productionCompanies.map((x) => x.toJson())),
         "production_countries":
             List<dynamic>.from(productionCountries.map((x) => x.toJson())),
-        "seasons": List<dynamic>.from(seasons.map((x) => x.toJson())),
+        // "seasons": List<dynamic>.from(seasons.map((x) => x.toJson())),
         "spoken_languages":
             List<dynamic>.from(spokenLanguages.map((x) => x.toJson())),
         "status": status,
@@ -500,7 +500,7 @@ class ProductionCountry {
       };
 }
 
-class Season {
+class Seasonnn {
   DateTime? airDate;
   int episodeCount;
   int id;
@@ -510,7 +510,7 @@ class Season {
   int seasonNumber;
   int voteAverage;
 
-  Season({
+  Seasonnn({
     required this.airDate,
     required this.episodeCount,
     required this.id,
@@ -521,7 +521,7 @@ class Season {
     required this.voteAverage,
   });
 
-  Season copyWith({
+  Seasonnn copyWith({
     DateTime? airDate,
     int? episodeCount,
     int? id,
@@ -531,7 +531,7 @@ class Season {
     int? seasonNumber,
     int? voteAverage,
   }) =>
-      Season(
+      Seasonnn(
         airDate: airDate ?? this.airDate,
         episodeCount: episodeCount ?? this.episodeCount,
         id: id ?? this.id,
@@ -542,11 +542,11 @@ class Season {
         voteAverage: voteAverage ?? this.voteAverage,
       );
 
-  factory Season.fromRawJson(String str) => Season.fromJson(json.decode(str));
+  factory Seasonnn.fromRawJson(String str) => Seasonnn.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory Season.fromJson(Map<String, dynamic> json) => Season(
+  factory Seasonnn.fromJson(Map<String, dynamic> json) => Seasonnn(
         airDate:
             json["air_date"] == null ? null : DateTime.parse(json["air_date"]),
         episodeCount: json["episode_count"],

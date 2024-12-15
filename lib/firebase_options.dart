@@ -41,48 +41,48 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCAqjEJnqGKLawUO1T-cbEsEetEnkQP-f0',
-    appId: '1:431751396135:web:d3c8da2091359b647bc702',
-    messagingSenderId: '431751396135',
-    projectId: 'netflix-4d730',
-    authDomain: 'netflix-4d730.firebaseapp.com',
-    storageBucket: 'netflix-4d730.firebasestorage.app',
-    measurementId: 'G-Y9LHRW0N91',
+    apiKey: 'AIzaSyBaH9JBxb9EeS5NVabDBJzR4NW0t0pBO-M',
+    appId: '1:45642392985:web:efa30c2880c5e8e01c9f08',
+    messagingSenderId: '45642392985',
+    projectId: 'netflix2-4f122',
+    authDomain: 'netflix2-4f122.firebaseapp.com',
+    storageBucket: 'netflix2-4f122.firebasestorage.app',
+    measurementId: 'G-L7DMYY7XRP',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCsAClnOGvGSGVKADOKx7Rcq7ItSPjbTrs',
-    appId: '1:431751396135:android:a2f025a5eded45997bc702',
-    messagingSenderId: '431751396135',
-    projectId: 'netflix-4d730',
-    storageBucket: 'netflix-4d730.firebasestorage.app',
+    apiKey: 'AIzaSyBkE0veQms_e2tSjrdwI3NXGeyMkTJCEMA',
+    appId: '1:45642392985:android:05c2d283a4c3e3591c9f08',
+    messagingSenderId: '45642392985',
+    projectId: 'netflix2-4f122',
+    storageBucket: 'netflix2-4f122.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBsC8wzz5P1wRlTN4ewCfGUckXSYAB6inc',
-    appId: '1:431751396135:ios:0318ed44c4a60e8b7bc702',
-    messagingSenderId: '431751396135',
-    projectId: 'netflix-4d730',
-    storageBucket: 'netflix-4d730.firebasestorage.app',
+    apiKey: 'AIzaSyAg6iT8Ne98T3SaxudopM2FXuJ1N7bQvyw',
+    appId: '1:45642392985:ios:f789a9d45cab20d41c9f08',
+    messagingSenderId: '45642392985',
+    projectId: 'netflix2-4f122',
+    storageBucket: 'netflix2-4f122.firebasestorage.app',
     iosBundleId: 'com.example.netflixApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBsC8wzz5P1wRlTN4ewCfGUckXSYAB6inc',
-    appId: '1:431751396135:ios:0318ed44c4a60e8b7bc702',
-    messagingSenderId: '431751396135',
-    projectId: 'netflix-4d730',
-    storageBucket: 'netflix-4d730.firebasestorage.app',
+    apiKey: 'AIzaSyAg6iT8Ne98T3SaxudopM2FXuJ1N7bQvyw',
+    appId: '1:45642392985:ios:f789a9d45cab20d41c9f08',
+    messagingSenderId: '45642392985',
+    projectId: 'netflix2-4f122',
+    storageBucket: 'netflix2-4f122.firebasestorage.app',
     iosBundleId: 'com.example.netflixApp',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCAqjEJnqGKLawUO1T-cbEsEetEnkQP-f0',
-    appId: '1:431751396135:web:95dcf7b40a35bda37bc702',
-    messagingSenderId: '431751396135',
-    projectId: 'netflix-4d730',
-    authDomain: 'netflix-4d730.firebaseapp.com',
-    storageBucket: 'netflix-4d730.firebasestorage.app',
-    measurementId: 'G-TZXDHKLZ4G',
+    apiKey: 'AIzaSyBaH9JBxb9EeS5NVabDBJzR4NW0t0pBO-M',
+    appId: '1:45642392985:web:10b857016c8bb9c81c9f08',
+    messagingSenderId: '45642392985',
+    projectId: 'netflix2-4f122',
+    authDomain: 'netflix2-4f122.firebaseapp.com',
+    storageBucket: 'netflix2-4f122.firebasestorage.app',
+    measurementId: 'G-KR6P3ZYNKT',
   );
 }

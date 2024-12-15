@@ -4,7 +4,6 @@ import 'package:netflix_app/core/models/movie%20model/movie_details_model.dart';
 import 'package:netflix_app/core/models/movie%20model/movie_model.dart';
 import 'package:netflix_app/core/models/tv_details_model/tv_details_model.dart';
 import 'package:netflix_app/core/models/tv_details_model/tv_model.dart';
-import 'package:netflix_app/screens/models/tv_detail_model/tv_detail_model.dart';
 
 abstract class TvDetailState {}
 

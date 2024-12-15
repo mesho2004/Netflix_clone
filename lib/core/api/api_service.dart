@@ -6,8 +6,6 @@ import 'package:netflix_app/core/constant/apikey.dart';
 import 'package:netflix_app/core/models/movie%20model/movie_details_model.dart';
 import 'package:netflix_app/core/models/movie%20model/movie_model.dart';
 import 'package:netflix_app/core/models/tv_details_model/tv_details_model.dart';
-import 'package:netflix_app/screens/models/tv_detail_model/tv_detail_model.dart';
-
 import '../models/tv_details_model/tv_model.dart';
 
 class Api {
@@ -22,6 +20,7 @@ class Api {
   static const on_the_air = '${baseUrl}tv/on_the_air$key';
   static const popular_tv = '${baseUrl}tv/popular$key';
   static const top_rated_tv = '${baseUrl}tv/top_rated$key';
+  static const downloads = "${baseUrl}/trending/all/day$key";
 
   Future<List<Movie>> getTrendingMovies() async {
     try {
@@ -170,9 +169,9 @@ class Api {
   }
 
   Future<TvDetailsModel> getTvDetails(int id) async {
-    final Tvdetails = '${baseUrl}tv/$id$key';
+    final TvDetails = '${baseUrl}tv/$id$key';
     try {
-      final response = await _dio.get(Tvdetails);
+      final response = await _dio.get(TvDetails);
       return TvDetailsModel.fromJson(response.data);
     } catch (e) {
       log('Error fetching tv details: $e');

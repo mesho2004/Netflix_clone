@@ -11,6 +11,8 @@ import 'package:netflix_app/core/models/tv_details_model/tv_model.dart';
 import 'package:netflix_app/core/repos/movies_repo.dart';
 import 'package:netflix_app/core/repos/tv_repo.dart';
 import 'package:netflix_app/screens/details/presentation/movie/details_screen.dart';
+import 'package:netflix_app/screens/testtttt/movie_details_screen.dart';
+import 'package:netflix_app/screens/testtttt/tv_show_details_screen.dart';
 
 class CustomMovie extends StatelessWidget {
   const CustomMovie({required this.title, required this.movieType});
@@ -138,7 +140,7 @@ class CustomMovie extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MovieDetail(id: movie.id),
+                  builder: (context) => MovieDetailsScreen(movieId: movie.id),
                 ),
               );
             },
@@ -169,7 +171,7 @@ class CustomMovie extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => TvDetail(id: tvShow.id),
+                  builder: (context) => TVShowDetailsScreen(tvShowId: tvShow.id),
                 ),
               );
             },

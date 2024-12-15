@@ -37,12 +37,12 @@ class TvDetail extends StatelessWidget {
                 return Column(
                   children: [
                     TvDetailImage(
-                        height: height, posterPath: details.posterPath??""),
+                        height: height, posterPath: details.posterPath ?? ""),
                     TvDetailInfo(
                       genre: genre,
-                      title: details.name??"",
+                      title: details.name ?? "",
                       date: details.firstAirDate.toString(),
-                      overview: details.overview??"",
+                      overview: details.overview ?? "",
                     ),
                     const SizedBox(height: 30),
                     BlocProvider(

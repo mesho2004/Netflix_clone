@@ -25,9 +25,10 @@ class BottomNav extends StatelessWidget {
                 BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.search), label: 'Search'),
-                    BottomNavigationBarItem(icon: Icon(Icons.more), label: 'More'),
+                BottomNavigationBarItem(icon: Icon(Icons.collections), label: 'Coming soon'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.download), label: 'Downloads'),
+                    icon: Icon(Icons.emoji_emotions), label: 'Fast Laugh'),
+                    BottomNavigationBarItem(icon: Icon(Icons.list,), label: 'List')
               ]);
         });
   }
